@@ -3,10 +3,10 @@
 # import load_data module here
 
 # Update "" with your the name of the active members of the team
-__author__ = ""
+__author__ = "Ethan Huang, Kyle Freeman, Abigale Cooper, Kaitlyn Ward"
 
 # Update "" with your team (e.g. T-102, use the notation provided in the example)
-__team__ = ""
+__team__ = "T015"
 
 #==========================================#
 
