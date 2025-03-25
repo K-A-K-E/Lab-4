@@ -81,8 +81,8 @@ def test_return_list_correct_length() -> list[int]:
 
     # test that add_average returns a list   with the correct length (3 different test cases required)
     average = [[{'School': 'GP', 'ID': 10, 'Age': 18, 'StudyTime': 2.5, 'Failures': 0, 'Health': 3, 'Absences': 6, 'FallGrade': 5, 'WinterGrade': 6}], [{'School': 'MB', 'ID': 21, 'Age': 16, 'StudyTime': 2,
-                                                                                                                                                         'Failures': 0, 'Health': 3, 'Absences': 12, 'FallGrade': 5, 'WinterGrade': 5}], [{'School': 'BD', 'ID': 26, 'Age': 18, 'StudyTime': 2, 'Failures': 0, 'Health': 3, 'Absences': 2, 'FallGrade': 8, 'WinterGrade': 8}]]
-    length = [1, 1, 1]
+                                                                                                                                                         'Failures': 0, 'Health': 3, 'Absences': 12, 'FallGrade': 5, 'WinterGrade': 5}], []]
+    length = [1, 1, 0]
     for i in range(len(average)):
         try:
             assert len(add_average(average[i])
