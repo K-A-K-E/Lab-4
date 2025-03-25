@@ -240,7 +240,6 @@ def test_return_list_correct_length() -> list[int]:
 
 
 # Place test_return_correct_dict_inside_list function here
-from load_data import student_school_list, student_health_list, student_failures_list, student_age_list, load_data, add_average
 
 def test_return_correct_dict_inside_list() -> list[int]:
     # Complete the function with your test cases
