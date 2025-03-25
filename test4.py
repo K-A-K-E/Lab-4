@@ -105,7 +105,6 @@ def test_add_average() -> list[int]:
             test_num_3 += 1
             average_test = add_average(test_3)[0]
             assert abs(average_test["AvgGrade"] - test_answers_3[j]) < 0.001, f"test {test_num_3} for calculating the correct average grade failed."
-            # assert average_test["AvgGrade"] == test_answers_3[j]
             passed += 1
             j += 1
         except AssertionError as msg:
