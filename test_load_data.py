@@ -172,7 +172,8 @@ def test_add_average() -> list[int]:
             assert len(add_average(test_1)) == test_answers_1[i], f"test {test_num_1} for length of list failed."
             passed += 1
             i += 1
-        except:
+        except AssertionError as msg:
+            print(msg)
             failed += 1
             i += 1
 
@@ -186,7 +187,8 @@ def test_add_average() -> list[int]:
         try:
             assert num_avg_keys == num_keys + 1, f"test {test_num_2} for having the correct amount of keys failed."
             passed += 1
-        except:
+        except AssertionError as msg:
+            print(msg)
             failed += 1
 
     # test that the G_Avg value is properly calculated  (5 different test cases required)
@@ -199,11 +201,13 @@ def test_add_average() -> list[int]:
             # assert average_test["AvgGrade"] == test_answers_3[j]
             passed += 1
             j += 1
-        except:
+        except AssertionError as msg:
+            print(msg)
             failed += 1
             j += 1
 
     # return the a list with the number of tests that passed and the number that failed
     return [passed, failed]
+
 
 # Do NOT include a main script in your submission
