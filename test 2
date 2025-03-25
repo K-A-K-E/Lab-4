@@ -27,7 +27,7 @@ def test_return_list_correct_length() -> list[int]:
     for i in range(len(schools)):
         try:
             assert len(student_school_list(file, schools[i])
-                       ) == length[i], "wrong length for school list"
+                       ) == length[i], ("wrong length for school list. Test ", i, " Failed. ")
             test[0] += 1
         except AssertionError as error:
             test[1] += 1
@@ -38,7 +38,7 @@ def test_return_list_correct_length() -> list[int]:
     for i in range(len(age)):
         try:
             assert len(student_age_list(file, age[i])
-                       ) == length[i], "wrong length for age list"
+                       ) == length[i], ("wrong length for age list. Test ", i, " Failed. ")
             test[0] += 1
         except AssertionError as error:
             test[1] += 1
@@ -49,7 +49,7 @@ def test_return_list_correct_length() -> list[int]:
     for i in range(len(health)):
         try:
             assert len(student_health_list(file, health[i])
-                       ) == length[i], "wrong length for health list"
+                       ) == length[i], ("wrong length for health list. Test ", i, " Failed. ")
             test[0] += 1
         except AssertionError as error:
             test[1] += 1
@@ -60,7 +60,7 @@ def test_return_list_correct_length() -> list[int]:
     for i in range(len(failures)):
         try:
             assert len(student_failures_list(file, failures[i])
-                       ) == length[i], "wrong length for failures list"
+                       ) == length[i], ("wrong length for failures list. Test ", i, " Failed. ")
             test[0] += 1
         except AssertionError as error:
             test[1] += 1
@@ -73,10 +73,11 @@ def test_return_list_correct_length() -> list[int]:
     for i in range(len(loadData)):
         try:
             assert len(load_data(file, loadData[i])
-                       ) == length[i], "wrong length for load_data list"
+                       ) == length[i], ("wrong length for load_data list. Test ", i, " Failed. ")
             test[0] += 1
         except AssertionError as error:
             test[1] += 1
+           
 
     # test that add_average returns a list   with the correct length (3 different test cases required)
     average = [[{'School': 'GP', 'ID': 10, 'Age': 18, 'StudyTime': 2.5, 'Failures': 0, 'Health': 3, 'Absences': 6, 'FallGrade': 5, 'WinterGrade': 6}], [{'School': 'MB', 'ID': 21, 'Age': 16, 'StudyTime': 2,
@@ -85,7 +86,7 @@ def test_return_list_correct_length() -> list[int]:
     for i in range(len(average)):
         try:
             assert len(add_average(average[i])
-                       ) == length[i], "wrong length for add average list"
+                       ) == length[i], ("wrong length for add average list. Test ", i, " Failed. ")
             test[0] += 1
         except AssertionError as error:
             test[1] += 1
@@ -95,6 +96,9 @@ def test_return_list_correct_length() -> list[int]:
     return test
 
     # Do NOT include a main script in your submission
+
+
+   
 
 
        
