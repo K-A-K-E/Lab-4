@@ -12,7 +12,144 @@ __team__ = "T015"
 #==========================================#
 
 # Place test_return_list function here
+def test_return_list() -> list[int]:
+    # Complete the function with your test cases
+    test_fail = 0
+    test_pass = 0
+    # test that student_school_list returns a list (3 different test cases required)
+    count = 3
+    try: 
+        result1 = l.student_school_list('student-test.csv', 'GP')
+        assert isinstance(result1, list) #checks if it's a list 
+        test_pass += 1
+        count -= 1
+       
+        result2 = l.student_school_list('student-test.csv', 'ML')
+        assert isinstance(result2, list)
+        test_pass += 1
+        count-= 1
+        
+        result3 = l.student_school_list('student-test.csv', 'MS')
+        assert isinstance(result3, list)
+        test_pass += 1
+        count -= 1
+    except: 
+        test_fail += count
+    # test that student_age_list returns a list (3 different test cases required)
+    try:   
+        count = 3
+        result1 = l.student_age_list('student-test.csv', 18)
+        assert isinstance(result1, list)
+        test_pass += 1
+        count -= 1
 
+        result2 = l.student_age_list('student-test.csv', 15)
+        assert isinstance(result2, list)
+        test_pass += 1
+        count -= 1
+
+        result3 = l.student_age_list('student-test.csv', 19)
+        assert isinstance(result3, list)
+        test_pass += 1
+        count -= 1
+    except:
+        test_fail += count
+
+    # test that student_health_list returns a list (3 different test cases required)
+    try:    
+        count = 3
+        result1 = l.student_health_list('student-test.csv', 1)
+        assert isinstance(result1, list)
+        test_pass += 1
+        count -= 1
+
+        result2 = l.student_health_list('student-test.csv', 5)
+        assert isinstance(result2, list)
+        test_pass += 1
+        count -= 1
+
+        result3 = l.student_health_list('student-test.csv', 3)
+        assert isinstance(result3, list)
+        test_pass += 1
+        count -= 1
+    except:
+        test_fail += count
+    # test that student_failures_list returns a list (3 different test cases required)
+    try:
+        count = 3
+        result1 = l.student_failures_list('student-test.csv', 0)
+        assert isinstance(result1, list)
+        test_pass += 1
+        count -= 1
+
+        result2 = l.student_failures_list('student-test.csv', 3)
+        assert isinstance(result2, list)
+        test_pass += 1
+        count -= 1
+
+        result3 = l.student_failures_list('student-test.csv', 1)
+        assert isinstance(result3, list)
+        test_pass += 1
+        count -= 1
+    except:
+        test_fail += count
+    # test that load_data returns a list (6 different test cases required)
+    try:
+        count = 6
+        result1 = l.load_data('student-test.csv', {"Failures" : 1})
+        assert isinstance(result1, list)
+        test_pass += 1
+        count -= 1
+
+        result2 = l.load_data('student-test.csv', {"Age": 19})
+        assert isinstance(result2, list)
+        test_pass += 1
+        count -= 1
+
+        result3 = l.load_data('student-test.csv', {"Failures" : 4})
+        assert isinstance(result3, list)
+        test_pass += 1
+        count -= 1
+
+        result4 = l.load_data('student-test.csv', {"School" : "MB"})
+        assert isinstance(result4, list)
+        test_pass += 1
+        count -= 1
+
+        result5 = l.load_data('student-test.csv', {"Health" : 4})
+        assert isinstance(result5, list)
+        test_pass += 1
+        count -= 1
+
+        result6 = l.load_data('student-test.csv', {"School" : "GP"})
+        assert isinstance(result6, list)
+        test_pass += 1
+        count -= 1
+    except:
+        test_fail += count
+
+    # test that add_average returns a list (3 different test cases required)
+    try: 
+        count = 3
+        result1 = l.add_average([{'School': 'GP', 'ID': 1, 'Age': 18,'StudyTime': 2.5, 'Failures': 0, 'Health': 3, 'Absences': 6,'FallGrade': 5, 'WinterGrade': 6}])
+        assert isinstance(result1, list)
+        test_pass += 1
+        count -= 1
+
+        result2 = l.add_average([{'School': 'GP', 'ID': 2, 'Age': 17,'StudyTime': 2, 'Failures': 0, 'Health': 3, 'Absences': 4,'FallGrade': 5, 'WinterGrade': 5}])
+        assert isinstance(result2, list)
+        test_pass += 1
+        count -= 1
+
+        result3 = l.add_average(([{'School': 'GP', 'ID': 3, 'Age': 15,'StudyTime': 2, 'Failures': 3, 'Health': 3, 'Absences': 10,'FallGrade': 7, 'WinterGrade': 8}]))
+        assert isinstance(result3, list)
+        test_pass += 1
+        count -= 1
+    except:
+        test_fail += count
+
+    # return the a list with the number of tests that passed and the number that failed
+    return [test_pass, test_fail]
 
 
 
@@ -97,6 +234,8 @@ def test_return_list_correct_length() -> list[int]:
     return test
 
     # Do NOT include a main script in your submission
+
+
 
 
 # Place test_return_correct_dict_inside_list function here
