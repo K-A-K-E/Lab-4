@@ -64,6 +64,9 @@ def test_add_average() -> list[int]:
 
     passed = 0
     failed = 0
+    test_num_1 = 0
+    test_num_2 = 0
+    test_num_3 = 0
     i = 0
     j = 0
 
@@ -72,7 +75,8 @@ def test_add_average() -> list[int]:
 
     for test_1 in test_cases_1:
         try:
-            assert len(add_average(test_1)) == test_answers_1[i]
+            test_num_1 += 1
+            assert len(add_average(test_1)) == test_answers_1[i], f"test {test_num_1} for length of list failed."
             passed += 1
             i += 1
         except:
@@ -85,8 +89,9 @@ def test_add_average() -> list[int]:
     for test_2 in test_cases_2:
         num_keys = len(test_2[0])
         num_avg_keys = len(add_average(test_2)[0])
+        test_num_2 += 1
         try:
-            assert num_avg_keys == num_keys + 1
+            assert num_avg_keys == num_keys + 1, f"test {test_num_2} for having the correct amount of keys failed."
             passed += 1
         except:
             failed += 1
@@ -95,8 +100,9 @@ def test_add_average() -> list[int]:
 
     for test_3 in test_cases_3:
         try:
+            test_num_3 += 1
             average_test = add_average(test_3)[0]
-            assert abs(average_test["AvgGrade"] - test_answers_3[j]) < 0.001
+            assert abs(average_test["AvgGrade"] - test_answers_3[j]) < 0.001, f"test {test_num_3} for calculating the correct average grade failed."
             # assert average_test["AvgGrade"] == test_answers_3[j]
             passed += 1
             j += 1
