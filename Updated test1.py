@@ -20,7 +20,7 @@ def test_return_list() -> list[int]:
     # test that student_school_list returns a list (3 different test cases required)
     try: 
         result1 = student_school_list('student-test.csv', 'GP')
-        assert isinstance(student_school_list('student-test.csv', 'GP'), list) #checks if it's a list 
+        assert isinstance(result1, 'GP'), list) #checks if it's a list 
         test_pass += 1
     except AssertionError as e:
         print(e)
