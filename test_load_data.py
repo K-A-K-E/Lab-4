@@ -19,17 +19,17 @@ def test_return_list() -> list[int]:
     # test that student_school_list returns a list (3 different test cases required)
     count = 3
     try: 
-        result1 = l.student_school_list('student-test.csv', 'GP')
+        result1 = student_school_list('student-test.csv', 'GP')
         assert isinstance(result1, list) #checks if it's a list 
         test_pass += 1
         count -= 1
        
-        result2 = l.student_school_list('student-test.csv', 'ML')
+        result2 = student_school_list('student-test.csv', 'ML')
         assert isinstance(result2, list)
         test_pass += 1
         count-= 1
         
-        result3 = l.student_school_list('student-test.csv', 'MS')
+        result3 = student_school_list('student-test.csv', 'MS')
         assert isinstance(result3, list)
         test_pass += 1
         count -= 1
@@ -38,17 +38,17 @@ def test_return_list() -> list[int]:
     # test that student_age_list returns a list (3 different test cases required)
     try:   
         count = 3
-        result1 = l.student_age_list('student-test.csv', 18)
+        result1 = student_age_list('student-test.csv', 18)
         assert isinstance(result1, list)
         test_pass += 1
         count -= 1
 
-        result2 = l.student_age_list('student-test.csv', 15)
+        result2 = student_age_list('student-test.csv', 15)
         assert isinstance(result2, list)
         test_pass += 1
         count -= 1
 
-        result3 = l.student_age_list('student-test.csv', 19)
+        result3 = student_age_list('student-test.csv', 19)
         assert isinstance(result3, list)
         test_pass += 1
         count -= 1
@@ -58,17 +58,17 @@ def test_return_list() -> list[int]:
     # test that student_health_list returns a list (3 different test cases required)
     try:    
         count = 3
-        result1 = l.student_health_list('student-test.csv', 1)
+        result1 = student_health_list('student-test.csv', 1)
         assert isinstance(result1, list)
         test_pass += 1
         count -= 1
 
-        result2 = l.student_health_list('student-test.csv', 5)
+        result2 = student_health_list('student-test.csv', 5)
         assert isinstance(result2, list)
         test_pass += 1
         count -= 1
 
-        result3 = l.student_health_list('student-test.csv', 3)
+        result3 = student_health_list('student-test.csv', 3)
         assert isinstance(result3, list)
         test_pass += 1
         count -= 1
@@ -77,17 +77,17 @@ def test_return_list() -> list[int]:
     # test that student_failures_list returns a list (3 different test cases required)
     try:
         count = 3
-        result1 = l.student_failures_list('student-test.csv', 0)
+        result1 = student_failures_list('student-test.csv', 0)
         assert isinstance(result1, list)
         test_pass += 1
         count -= 1
 
-        result2 = l.student_failures_list('student-test.csv', 3)
+        result2 = student_failures_list('student-test.csv', 3)
         assert isinstance(result2, list)
         test_pass += 1
         count -= 1
 
-        result3 = l.student_failures_list('student-test.csv', 1)
+        result3 = student_failures_list('student-test.csv', 1)
         assert isinstance(result3, list)
         test_pass += 1
         count -= 1
@@ -96,32 +96,32 @@ def test_return_list() -> list[int]:
     # test that load_data returns a list (6 different test cases required)
     try:
         count = 6
-        result1 = l.load_data('student-test.csv', {"Failures" : 1})
+        result1 = load_data('student-test.csv', {"Failures" : 1})
         assert isinstance(result1, list)
         test_pass += 1
         count -= 1
 
-        result2 = l.load_data('student-test.csv', {"Age": 19})
+        result2 = load_data('student-test.csv', {"Age": 19})
         assert isinstance(result2, list)
         test_pass += 1
         count -= 1
 
-        result3 = l.load_data('student-test.csv', {"Failures" : 4})
+        result3 = load_data('student-test.csv', {"Failures" : 4})
         assert isinstance(result3, list)
         test_pass += 1
         count -= 1
 
-        result4 = l.load_data('student-test.csv', {"School" : "MB"})
+        result4 = load_data('student-test.csv', {"School" : "MB"})
         assert isinstance(result4, list)
         test_pass += 1
         count -= 1
 
-        result5 = l.load_data('student-test.csv', {"Health" : 4})
+        result5 = load_data('student-test.csv', {"Health" : 4})
         assert isinstance(result5, list)
         test_pass += 1
         count -= 1
 
-        result6 = l.load_data('student-test.csv', {"School" : "GP"})
+        result6 = load_data('student-test.csv', {"School" : "GP"})
         assert isinstance(result6, list)
         test_pass += 1
         count -= 1
@@ -131,17 +131,17 @@ def test_return_list() -> list[int]:
     # test that add_average returns a list (3 different test cases required)
     try: 
         count = 3
-        result1 = l.add_average([{'School': 'GP', 'ID': 1, 'Age': 18,'StudyTime': 2.5, 'Failures': 0, 'Health': 3, 'Absences': 6,'FallGrade': 5, 'WinterGrade': 6}])
+        result1 = add_average([{'School': 'GP', 'ID': 1, 'Age': 18,'StudyTime': 2.5, 'Failures': 0, 'Health': 3, 'Absences': 6,'FallGrade': 5, 'WinterGrade': 6}])
         assert isinstance(result1, list)
         test_pass += 1
         count -= 1
 
-        result2 = l.add_average([{'School': 'GP', 'ID': 2, 'Age': 17,'StudyTime': 2, 'Failures': 0, 'Health': 3, 'Absences': 4,'FallGrade': 5, 'WinterGrade': 5}])
+        result2 = add_average([{'School': 'GP', 'ID': 2, 'Age': 17,'StudyTime': 2, 'Failures': 0, 'Health': 3, 'Absences': 4,'FallGrade': 5, 'WinterGrade': 5}])
         assert isinstance(result2, list)
         test_pass += 1
         count -= 1
 
-        result3 = l.add_average(([{'School': 'GP', 'ID': 3, 'Age': 15,'StudyTime': 2, 'Failures': 3, 'Health': 3, 'Absences': 10,'FallGrade': 7, 'WinterGrade': 8}]))
+        result3 = add_average(([{'School': 'GP', 'ID': 3, 'Age': 15,'StudyTime': 2, 'Failures': 3, 'Health': 3, 'Absences': 10,'FallGrade': 7, 'WinterGrade': 8}]))
         assert isinstance(result3, list)
         test_pass += 1
         count -= 1
